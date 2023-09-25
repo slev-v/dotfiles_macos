@@ -21,7 +21,6 @@ end
 -- alpha
 alt("f", { "window --toggle zoom-fullscreen" })
 alt("l", { "space --focus recent" })
-alt("m", { "space --toggle mission-control" })
 alt("p", { "window --toggle pip" })
 alt("g", { "space --toggle padding", "space --toggle gap" })
 alt("r", { "space --rotate 90" })
