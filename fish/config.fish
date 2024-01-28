@@ -14,3 +14,6 @@ abbr e "exit"
 abbr c "clear"
 abbr ls "lsd"
 abbr lz "lazygit"
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
