@@ -1,6 +1,7 @@
 return {
   {
     "akinsho/bufferline.nvim",
+    require("transparent").clear_prefix("BufferLine"),
     opts = function()
       local bufferline = require("bufferline")
       bufferline.setup({
@@ -12,7 +13,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
-
+    -- require("transparent").clear_prefix("lualine"),
     opts = function()
       local Util = require("lazyvim.util")
       local lualine_require = require("lualine_require")
@@ -29,7 +30,8 @@ return {
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
         },
         sections = {
-          lualine_a = { "mode" },
+          -- lualine_a = { { "mode", color = Util.ui.fg("Normal") } },
+          lualine_a = { { "mode" } },
           lualine_b = { "branch" },
 
           lualine_c = {

@@ -7,6 +7,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
+    require("transparent").clear_prefix("Cmp"),
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local has_words_before = function()
