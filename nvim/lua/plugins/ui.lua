@@ -2,6 +2,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     require("transparent").clear_prefix("BufferLine"),
+    dependencies = "nvim-tree/nvim-web-devicons",
     opts = function()
       local bufferline = require("bufferline")
       bufferline.setup({
@@ -28,6 +29,8 @@ return {
           theme = "auto",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
+          component_separators = "|",
+          section_separators = "",
         },
         sections = {
           -- lualine_a = { { "mode", color = Util.ui.fg("Normal") } },
