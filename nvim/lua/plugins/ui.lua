@@ -3,14 +3,11 @@ return {
     "akinsho/bufferline.nvim",
     require("transparent").clear_prefix("BufferLine"),
     dependencies = "nvim-tree/nvim-web-devicons",
-    opts = function()
-      local bufferline = require("bufferline")
-      bufferline.setup({
-        options = {
-          style_preset = bufferline.style_preset.minimal,
-        },
-      })
-    end,
+    opts = {
+      options = {
+        diagnostics = false,
+      },
+    },
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -20,7 +17,7 @@ return {
       local lualine_require = require("lualine_require")
       lualine_require.require = require
 
-      local icons = require("lazyvim.config").icons
+      local icons = require("config.icons")
 
       vim.o.laststatus = vim.g.lualine_laststatus
 
@@ -29,16 +26,15 @@ return {
           theme = "auto",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
-          component_separators = "|",
+          component_separators = "",
           section_separators = "",
         },
         sections = {
-          -- lualine_a = { { "mode", color = Util.ui.fg("Normal") } },
-          lualine_a = { { "mode" } },
-          lualine_b = { "branch" },
-
-          lualine_c = {
-            Util.lualine.root_dir(),
+          lualine_a = {
+            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+            { "filename", file_status = false, path = 4, color = Util.ui.fg("Normal") },
+          },
+          lualine_b = {
             {
               "diagnostics",
               symbols = {
@@ -48,22 +44,12 @@ return {
                 hint = icons.diagnostics.Hint,
               },
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-            { Util.lualine.pretty_path() },
           },
-          lualine_x = {
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.mode.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-              color = Util.ui.fg("Constant"),
-            },
-            -- stylua: ignore
-            {
-              function() return "  " .. require("dap").status() end,
-              cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
-              color = Util.ui.fg("Debug"),
-            },
+
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = {
             {
               require("lazy.status").updates,
               cond = require("lazy.status").has_updates,
@@ -87,12 +73,6 @@ return {
                 end
               end,
             },
-          },
-          lualine_y = {},
-          lualine_z = {
-            function()
-              return os.date("%R")
-            end,
           },
         },
         extensions = { "neo-tree", "lazy" },
