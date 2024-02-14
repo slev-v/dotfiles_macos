@@ -1,0 +1,51 @@
+# ______________________________________
+# options
+set -g mouse on
+# Start windows and panes at 1, not 0
+set -g base-index 1
+setw -g pane-base-index 1
+set-window-option -g pane-base-index 1
+set-option -g renumber-windows on
+
+set -g escape-time 0
+
+# ________________________________________
+# plugins
+set -g @plugin 'joshmedeski/tmux-nerd-font-window-name'
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+# ________________________________________
+# statusline
+set -g status-style 'bg=default'
+set -g status-fg blue
+set -g pane-border-style fg=blue
+set -g pane-active-border-style "bg=default fg=cyan"
+
+set -g status-right ""
+set -g status-left ""
+
+set -g status-justify centre
+
+set -g window-status-current-format "●"
+set -g window-status-format "○"
+
+# ________________________________________
+# bindings
+# Ctrl Space for prefix
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# other
+bind '"' split-window -v -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind-key -n C-Tab next-window
+bind-key -n C-S-Tab previous-window
+bind-key x kill-pane
+
+run '~/.tmux/plugins/tpm/tpm'

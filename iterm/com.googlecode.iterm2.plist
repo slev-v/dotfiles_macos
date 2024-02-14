@@ -5769,6 +5769,28 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
+		<key>0x67-0x100000-0x5</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>0x01 0x67</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0x6b-0x100000-0x28</key>
+		<dict>
+			<key>Action</key>
+			<integer>11</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>0x01 0x4b</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x74-0x100000-0x11</key>
 		<dict>
 			<key>Action</key>
@@ -6081,7 +6103,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>10</real>
+			<real>64</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -6580,7 +6602,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.40453783400515292</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
