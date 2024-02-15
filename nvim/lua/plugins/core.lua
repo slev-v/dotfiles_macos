@@ -1,4 +1,5 @@
 return {
+
   {
     "L3MON4D3/LuaSnip",
     keys = function()
@@ -17,6 +18,17 @@ return {
 
       local luasnip = require("luasnip")
       local cmp = require("cmp")
+
+      opts.window = {
+        completion = {
+          border = "rounded",
+          scrollbar = false,
+        },
+        documentation = {
+          border = "rounded",
+          scrollbar = false,
+        },
+      }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)

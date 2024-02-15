@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.opt.signcolumn = "auto"
 vim.opt.foldcolumn = "0"
+vim.opt.pumblend = 0

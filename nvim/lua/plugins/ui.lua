@@ -1,5 +1,11 @@
 return {
   {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_color = "#000000",
+    },
+  },
+  {
     "akinsho/bufferline.nvim",
     require("transparent").clear_prefix("BufferLine"),
     dependencies = "nvim-tree/nvim-web-devicons",

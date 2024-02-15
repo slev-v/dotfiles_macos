@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "catppuccin-mocha",
     },
   },
 
@@ -35,5 +35,10 @@ return {
   },
   { "Mofiqul/dracula.nvim" },
   { "ellisonleao/gruvbox.nvim" },
-  { "xiyaowong/transparent.nvim" },
+  {
+    "xiyaowong/transparent.nvim",
+    opts = {
+      extra_groups = { "Pmenu", "Float", "NormalFloat" },
+    },
+  },
 }
