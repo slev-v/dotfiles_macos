@@ -2,11 +2,27 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "catppuccin-macchiato",
     },
   },
 
-  { "catppuccin/nvim" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    ---@class CatppuccinOptions
+    opts = {
+      transparent_background = true,
+      highlight_overrides = {
+        macchiato = function(macchiato)
+          return {
+            LineNr = { fg = macchiato.overlay1 },
+            Comment = { fg = macchiato.overlay0 },
+            NeoTreeMessage = { fg = macchiato.overlay1 },
+          }
+        end,
+      },
+    },
+  },
   { "folke/tokyonight.nvim" },
   { "rose-pine/neovim" },
   { "navarasu/onedark.nvim" },
