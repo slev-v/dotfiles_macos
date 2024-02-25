@@ -8,6 +8,7 @@ set -Ux EDITOR nvim
 
 set -x PATH /Users/macbook/.local/bin $PATH
 
+abbr gst "git status -sb"
 abbr n "nvim"
 abbr n. "nvim ."
 abbr e "exit"
