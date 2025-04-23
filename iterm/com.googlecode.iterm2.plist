@@ -6,6 +6,10 @@
 	<array/>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
+	<key>AiMaxTokens</key>
+	<integer>16384</integer>
+	<key>AiModel</key>
+	<string>gpt-3.5-turbo</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
@@ -7769,7 +7773,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>6940E756-26DB-4C94-85C8-8D833983A09F</string>
+	<string>B3CE38EF-F17E-41C5-A04D-17A4F54FBBD8</string>
 	<key>DimInactiveSplitPanes</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
@@ -8160,7 +8164,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>25</real>
+			<real>22.608546350357376</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -8240,6 +8244,8 @@
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Draw Powerline Glyphs</key>
+			<true/>
+			<key>Enable Triggers in Interactive Apps</key>
 			<true/>
 			<key>Flashing Bell</key>
 			<false/>
@@ -8591,6 +8597,8 @@
 			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Place Prompt at First Column</key>
+			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -8631,6 +8639,10 @@
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
+			<key>Show Offscreen Command line</key>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
@@ -8659,7 +8671,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.25</real>
+			<real>0.10383638422539894</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
@@ -17967,6 +17979,8 @@
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
+	<true/>
+	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>

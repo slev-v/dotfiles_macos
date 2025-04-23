@@ -1,0 +1,35 @@
+{
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "de11.abvpn.ru",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "id": "fa2adffc-baaf-4152-b4ac-ba78784f726d"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "disableSystemRoot": false,
+                    "serverName": "de11.abvpn.ru"
+                },
+                "wsSettings": {
+                    "path": "/websocket"
+                },
+                "xtlsSettings": {
+                    "disableSystemRoot": false
+                }
+            }
+        }
+    ]
+}

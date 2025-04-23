@@ -8,6 +8,7 @@ vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>")
 
 vim.keymap.set("n", "<leader>i", "<cmd>DBUIToggle<cr>")
+vim.keymap.set("n", "<leader>a", "<cmd>Atac<cr>")
 
 vim.keymap.set("n", "<leader>o", function()
   if vim.bo.filetype == "neo-tree" then

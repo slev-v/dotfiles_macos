@@ -38,7 +38,7 @@ return {
         sections = {
           lualine_a = {
             { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-            { "filename", file_status = false, path = 4, color = Util.ui.fg("Normal") },
+            { "filename", file_status = false, path = 4 },
           },
           lualine_b = {
             {
@@ -59,7 +59,7 @@ return {
             {
               require("lazy.status").updates,
               cond = require("lazy.status").has_updates,
-              color = Util.ui.fg("Special"),
+              -- color = Util.ui.fg("Special"),
             },
             {
               "diff",

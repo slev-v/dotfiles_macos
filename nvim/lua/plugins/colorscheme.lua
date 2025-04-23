@@ -2,8 +2,12 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "kanagawa",
     },
+  },
+
+  {
+    "rafi/awesome-vim-colorschemes",
   },
 
   {
@@ -53,6 +57,7 @@ return {
     },
   },
   { "folke/tokyonight.nvim" },
+  { "drewtempelmeyer/palenight.vim" },
   { "rose-pine/neovim" },
   { "navarasu/onedark.nvim" },
   {

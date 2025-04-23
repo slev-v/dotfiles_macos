@@ -9,6 +9,15 @@ return {
       vim.g.db_ui_winwidth = 35
     end,
   },
+  {
+    "NachoNievaG/atac.nvim",
+    dependencies = { "akinsho/toggleterm.nvim" },
+    config = function()
+      require("atac").setup({
+        dir = "~/Develop/.atac-files", -- By default, the dir will be set as /tmp/atac
+      })
+    end,
+  },
   -- { "kristijanhusak/vim-dadbod-completion" },
   -- {
   --   "hrsh7th/nvim-cmp",
